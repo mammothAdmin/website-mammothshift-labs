@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — MammothShift Labs</title>
+  <meta name="description" content="Get in touch with MammothShift Labs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polygon points='16,2 28,9 28,23 16,30 4,23 4,9' fill='none' stroke='%2318B9D9' stroke-width='2'/><circle cx='16' cy='16' r='4' fill='%2318B9D9'/></svg>">
+</head>
+<body class="ml-stage">
+<div class="ml-page">
+
+  <header>
+    <nav class="ml-nav">
+      <a href="index.html" class="ml-nav-logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="mlGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#18B9D9"/>
+              <stop offset="50%" stop-color="#8b5cf6"/>
+              <stop offset="100%" stop-color="#d946ef"/>
+            </linearGradient>
+          </defs>
+          <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" fill="none" stroke="url(#mlGrad)" stroke-width="3"/>
+          <polygon points="50,25 70,37.5 70,62.5 50,75 30,62.5 30,37.5" fill="rgba(24,185,217,0.1)" stroke="#18B9D9" stroke-width="1.5" opacity="0.6"/>
+          <text x="50" y="56" font-family="Inter, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#f8fafc">ML</text>
+        </svg>
+        <span class="ml-nav-wordmark">MammothShift Labs</span>
+      </a>
+      <ul class="ml-nav-links">
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="ml-main">
+    <section class="ml-contact-section">
+      <div class="ml-contact-grid">
+
+        <div class="ml-animate">
+          <p class="ml-eyebrow">Get in Touch</p>
+          <h1 class="ml-contact-headline ml-animate ml-animate-d1">
+            Let's start a <span class="ml-gradient-text">conversation.</span>
+          </h1>
+          <p class="ml-contact-sub ml-animate ml-animate-d2">
+            Whether you have a question about one of our products or want to explore how we can help, we'd like to hear from you.
+          </p>
+
+          <ul class="ml-expect-list ml-animate ml-animate-d3">
+            <li class="ml-expect-item">
+              <div class="ml-expect-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#18b9d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              </div>
+              <div>
+                <div class="ml-expect-title">A conversation first</div>
+                <div class="ml-expect-desc">No demo script, no pressure. We'll start with what you're trying to solve.</div>
+              </div>
+            </li>
+            <li class="ml-expect-item">
+              <div class="ml-expect-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#18b9d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <div class="ml-expect-title">Response within one business day</div>
+                <div class="ml-expect-desc">We'll follow up by email to answer questions or schedule a call.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="ml-form-card ml-animate ml-animate-d2">
+          <div class="ml-form-title">Tell us about yourself</div>
+          <div class="ml-form-sub">We'll use this to prepare for the conversation.</div>
+
+          <form id="contactForm">
+
+            <div class="ml-form-row">
+              <div class="ml-form-group">
+                <label class="ml-form-label" for="fname">First Name <span>*</span></label>
+                <input class="ml-form-input" type="text" id="fname" name="first_name" placeholder="Jane" required>
+              </div>
+              <div class="ml-form-group">
+                <label class="ml-form-label" for="lname">Last Name <span>*</span></label>
+                <input class="ml-form-input" type="text" id="lname" name="last_name" placeholder="Smith" required>
+              </div>
+            </div>
+
+            <div class="ml-form-group">
+              <label class="ml-form-label" for="email">Email <span>*</span></label>
+              <input class="ml-form-input" type="email" id="email" name="email" placeholder="jane@example.com" required>
+            </div>
+
+            <div class="ml-form-group">
+              <label class="ml-form-label" for="org">Organization</label>
+              <input class="ml-form-input" type="text" id="org" name="organization" placeholder="Company or firm name">
+            </div>
+
+            <div class="ml-form-group">
+              <div class="ml-form-label" style="margin-bottom: 10px;">I'm inquiring about</div>
+              <div class="ml-interest-grid">
+                <div class="ml-interest-item">
+                  <input type="checkbox" id="int-lawfabric" name="interest" value="lawfabric">
+                  <label for="int-lawfabric">LawFabric</label>
+                </div>
+                <div class="ml-interest-item">
+                  <input type="checkbox" id="int-cg360" name="interest" value="clientguard360">
+                  <label for="int-cg360">ClientGuard360</label>
+                </div>
+                <div class="ml-interest-item">
+                  <input type="checkbox" id="int-ms" name="interest" value="mammothshift">
+                  <label for="int-ms">MammothShift</label>
+                </div>
+                <div class="ml-interest-item">
+                  <input type="checkbox" id="int-pc" name="interest" value="proformconnect">
+                  <label for="int-pc">ProformConnect</label>
+                </div>
+                <div class="ml-interest-item">
+                  <input type="checkbox" id="int-general" name="interest" value="general">
+                  <label for="int-general">General inquiry</label>
+                </div>
+                <div class="ml-interest-item">
+                  <input type="checkbox" id="int-other" name="interest" value="not-sure">
+                  <label for="int-other">Not sure yet</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="ml-form-group">
+              <label class="ml-form-label" for="message">Anything else?</label>
+              <textarea class="ml-form-textarea" id="message" name="message" placeholder="Tell us what you're looking for, or just say hello."></textarea>
+            </div>
+
+            <div class="ml-form-divider"></div>
+
+            <button type="submit" class="ml-form-submit">Send Message</button>
+
+            <p class="ml-form-legal">
+              By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>.
+            </p>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="ml-footer">
+    <div class="ml-footer-inner">
+      <div class="ml-footer-copy">&copy; 2026 MammothShift Labs. All rights reserved.</div>
+      <ul class="ml-footer-links">
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
+  const firstName = document.getElementById('fname').value.trim();
+  const lastName = document.getElementById('lname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const organization = document.getElementById('org').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  const interests = Array.from(document.querySelectorAll('input[name="interest"]:checked'))
+    .map(cb => cb.value)
+    .join(', ');
+
+  const fullMessage = [
+    message,
+    interests ? `\nInterested in: ${interests}` : ''
+  ].filter(Boolean).join('');
+
+  try {
+    const response = await fetch('https://mammothshift-contactus.azurewebsites.net/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      mode: 'cors',
+      body: JSON.stringify({
+        name: `${firstName} ${lastName}`,
+        email: email,
+        company: organization || undefined,
+        message: fullMessage,
+        site: 'mammothshift-labs.com'
+      })
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert('Thank you! We\'ll be in touch within one business day.');
+      form.reset();
+    } else {
+      alert('Error sending message: ' + (data.error || 'Unknown error'));
+    }
+  } catch (err) {
+    alert('Error sending message: ' + err.message);
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+});
+</script>
+
+</div>
+</body>
+</html>
