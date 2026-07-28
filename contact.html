@@ -188,7 +188,7 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
   ].filter(Boolean).join('');
 
   try {
-    const response = await fetch('https://mammothshift-contactus.azurewebsites.net/api/contact', {
+    const response = await fetch('https://contactus.api.mammothshift-labs.com/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       mode: 'cors',
@@ -204,8 +204,7 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
     const data = await response.json();
 
     if (data.success) {
-      alert('Thank you! We\'ll be in touch within one business day.');
-      form.reset();
+      window.location.href = 'thank-you.html';
     } else {
       alert('Error sending message: ' + (data.error || 'Unknown error'));
     }
