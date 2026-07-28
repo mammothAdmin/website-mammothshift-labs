@@ -166,7 +166,8 @@ a:hover {
   color: var(--ml-fg);
 }
 
-.ml-nav-logo svg {
+.ml-nav-logo svg,
+.ml-nav-logo img {
   width: 36px;
   height: 36px;
 }
