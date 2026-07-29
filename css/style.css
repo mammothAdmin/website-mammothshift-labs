@@ -314,6 +314,14 @@ a:hover {
 .ml-footer-copy {
   font-size: 13px;
   color: var(--ml-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ml-footer-logo {
+  height: 20px;
+  width: auto;
 }
 
 .ml-footer-links {
