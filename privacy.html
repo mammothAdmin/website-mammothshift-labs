@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — MammothShift Labs</title>
   <meta name="description" content="MammothShift Labs privacy policy.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy Policy — MammothShift Labs">
+  <meta property="og:description" content="MammothShift Labs privacy policy.">
+  <meta property="og:image" content="img/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,22 +18,12 @@
 <body class="ml-stage">
 <div class="ml-page">
 
-  <header>
-    <nav class="ml-nav">
-      <a href="index.html" class="ml-nav-logo">
-        <img src="img/mammothshift-labs.png" alt="MammothShift Labs">
-        <span class="ml-nav-wordmark">MammothShift Labs</span>
-      </a>
-      <ul class="ml-nav-links">
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <msl-header></msl-header>
 
   <main class="ml-main">
     <div class="ml-legal">
       <p class="ml-eyebrow ml-animate">Legal</p>
-      <h1 class="ml-title-md ml-animate ml-animate-d1" style="margin-top: 12px;">Privacy Policy</h1>
+      <h1 class="ml-title-md ml-animate ml-animate-d1">Privacy Policy</h1>
       <p class="ml-last-updated ml-animate ml-animate-d2">Last updated: July 2026</p>
 
       <h2>Overview</h2>
@@ -54,16 +48,10 @@
     </div>
   </main>
 
-  <footer class="ml-footer">
-    <div class="ml-footer-inner">
-      <div class="ml-footer-copy">&copy; 2026 MammothShift Labs. All rights reserved.</div>
-      <ul class="ml-footer-links">
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-      </ul>
-    </div>
-  </footer>
+  <msl-footer></msl-footer>
 
 </div>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — MammothShift Labs</title>
   <meta name="description" content="Get in touch with MammothShift Labs.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — MammothShift Labs">
+  <meta property="og:description" content="Get in touch with MammothShift Labs.">
+  <meta property="og:image" content="img/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,17 +18,7 @@
 <body class="ml-stage">
 <div class="ml-page">
 
-  <header>
-    <nav class="ml-nav">
-      <a href="index.html" class="ml-nav-logo">
-        <img src="img/mammothshift-labs.png" alt="MammothShift Labs">
-        <span class="ml-nav-wordmark">MammothShift Labs</span>
-      </a>
-      <ul class="ml-nav-links">
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <msl-header></msl-header>
 
   <main class="ml-main">
     <section class="ml-contact-section">
@@ -89,7 +83,7 @@
             </div>
 
             <div class="ml-form-group">
-              <div class="ml-form-label" style="margin-bottom: 10px;">I'm inquiring about</div>
+              <div class="ml-form-label ml-form-label--gap">I'm inquiring about</div>
               <div class="ml-interest-grid">
                 <div class="ml-interest-item">
                   <input type="checkbox" id="int-lawfabric" name="interest" value="lawfabric">
@@ -127,6 +121,10 @@
 
             <button type="submit" class="ml-form-submit">Send Message</button>
 
+            <div id="form-error" class="ml-form-error">
+              Something went wrong. Please try again or email us directly.
+            </div>
+
             <p class="ml-form-legal">
               By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>.
             </p>
@@ -138,74 +136,11 @@
     </section>
   </main>
 
-  <footer class="ml-footer">
-    <div class="ml-footer-inner">
-      <div class="ml-footer-copy">&copy; 2026 MammothShift Labs. All rights reserved.</div>
-      <ul class="ml-footer-links">
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-      </ul>
-    </div>
-  </footer>
+  <msl-footer></msl-footer>
 
 </div>
-
-<script>
-document.getElementById('contactForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  const form = e.target;
-  const submitBtn = form.querySelector('button[type="submit"]');
-  const originalText = submitBtn.textContent;
-
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Sending...';
-
-  const firstName = document.getElementById('fname').value.trim();
-  const lastName = document.getElementById('lname').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const organization = document.getElementById('org').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  const interests = Array.from(document.querySelectorAll('input[name="interest"]:checked'))
-    .map(cb => cb.value)
-    .join(', ');
-
-  const fullMessage = [
-    message,
-    interests ? `\nInterested in: ${interests}` : ''
-  ].filter(Boolean).join('');
-
-  try {
-    const response = await fetch('https://contactus.api.mammothshift-labs.com/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      mode: 'cors',
-      body: JSON.stringify({
-        name: `${firstName} ${lastName}`,
-        email: email,
-        company: organization || undefined,
-        message: fullMessage,
-        site: 'mammothshift-labs.com'
-      })
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      window.location.href = 'thank-you.html';
-    } else {
-      alert('Error sending message: ' + (data.error || 'Unknown error'));
-    }
-  } catch (err) {
-    alert('Error sending message: ' + err.message);
-  } finally {
-    submitBtn.disabled = false;
-    submitBtn.textContent = originalText;
-  }
-});
-</script>
-
-</div>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
 </body>
 </html>
